@@ -5,4 +5,4 @@ spring:
         git:
           uri: https://github.com/IvanCherepica/ms-config-properties
           search-paths:
-              - "/{application}/{profile}"
+            - "/{application}/{profile}"
