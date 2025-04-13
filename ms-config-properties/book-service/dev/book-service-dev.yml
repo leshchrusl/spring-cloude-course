@@ -1,1 +1,4 @@
+server:
+  port: 8890
+
 myVariable: "Hello World!"

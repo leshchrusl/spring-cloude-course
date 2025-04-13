@@ -6,11 +6,30 @@ spring:
     name: config-server
   profiles:
     active: native
+---
+spring:
+  config:
+    activate:
+      on-profile: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leshchrusl/ms-config-properties
+          search-paths:
+            - "/{application}/{profile}"
+          default-label: master
+---
+spring:
+  config:
+    activate:
+      on-profile: native
   cloud:
     config:
       server:
         native:
-          search-locations: file://ms-config-properties/{application}/{profile}
+          search-locations: C:/Java/projects/srping-cloud-course/ms-config-properties/{application}/{profile}/
+---
 
 eureka:
   client:
