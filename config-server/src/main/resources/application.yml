@@ -28,7 +28,8 @@ spring:
     config:
       server:
         native:
-          search-locations: C:/Java/projects/srping-cloud-course/ms-config-properties/{application}/{profile}/
+          search-locations: file:\\\C:\Java\projects\srping-cloud-course\ms-config-properties\{application}\{profile}\
+#          C:/Java/projects/srping-cloud-course/ms-config-properties/{application}/{profile}/
 ---
 
 eureka:

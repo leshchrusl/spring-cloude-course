@@ -2,6 +2,10 @@ spring:
   application:
     name: book-service
 
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/books
+
   profiles:
     active: dev
 
