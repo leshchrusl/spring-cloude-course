@@ -1,0 +1,21 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: gateway-client
+
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: book_route
+#          uri: http://localhost:8081/
+#          predicates:
+##            - Path=/api/book/all
+#            - Header=spring-cloud-course
+##          filters:
+##            - RemoveRequestHeader=spring-cloud-course # Удаляем заголовок
+##            - name: RequestHeader        # Кастомный фильтр (можно заменить на GlobalFilter)
+##              args:
+##                header: spring-cloud-course
+##                exists: true             # Требуем наличие заголовка
