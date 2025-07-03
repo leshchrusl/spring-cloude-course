@@ -10,7 +10,7 @@ public class RouterConfig {
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("book_route", r -> r
-                        .path("/api/book/all")
+                        .path("/**")
                         .filters(f -> f
                                 .removeRequestHeader("spring-cloud-course"))
                         .uri("http://localhost:8081")) // адрес Client Service

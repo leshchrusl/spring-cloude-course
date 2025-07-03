@@ -21,4 +21,9 @@ public class ClientController {
         return bookService.getAllBooks();
     }
 
+    @GetMapping("/test")
+    public String test() {
+        return "Client Service is running!";
+    }
+
 }
