@@ -9,11 +9,22 @@ public class RouterConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("book_route", r -> r
-                        .path("/**")
-                        .filters(f -> f
-                                .removeRequestHeader("spring-cloud-course"))
-                        .uri("http://localhost:8081")) // адрес Client Service
+                .route("client-service", r -> r
+                        .path("/api/client/**")
+//                        .filters(f -> f
+//                                .removeRequestHeader("spring-cloud-course"))
+                        .uri("lb://client-service")) // адрес Client Service
+                .build();
+    }
+
+    @Bean
+    public RouteLocator routeLocatorForClientUpdate(RouteLocatorBuilder builder) {
+        return builder.routes()
+                .route("client-update", r -> r
+                        .path("/api/update")
+//                        .filters(f -> f
+//                                .removeRequestHeader("spring-cloud-course"))
+                        .uri("lb://client-update")) // адрес Client Service
                 .build();
     }
 }
