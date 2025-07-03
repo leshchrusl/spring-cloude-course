@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: client-service
+  sleuth:
+    sampler:
+      probability: 2.0
+  zipkin:
+    enabled: true
 
 eureka:
   client:

@@ -4,7 +4,11 @@ server:
 spring:
   application:
     name: gateway-client
-
+  sleuth:
+    sampler:
+      probability: 2.0
+  zipkin:
+    enabled: true
 eureka:
   client:
     service-url:

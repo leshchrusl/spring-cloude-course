@@ -12,10 +12,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-public class App 
+public class ClientUpdaterApp
 {
     public static void main( String[] args )
     {
-        org.springframework.boot.SpringApplication.run(App.class, args);
+        org.springframework.boot.SpringApplication.run(ClientUpdaterApp.class, args);
     }
 }

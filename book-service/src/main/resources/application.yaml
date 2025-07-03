@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: book-service
+  sleuth:
+    sampler:
+      probability: 2.0
+  zipkin:
+    enabled: true
 
   data:
     mongodb:
